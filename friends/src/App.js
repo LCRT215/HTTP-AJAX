@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import axios from "axios";
+import FriendList from "./components/FriendList";
+import FriendForm from "./components/FriendForm";
+// import axios from "axios";
 
 class App extends Component {
   constructor() {
@@ -10,7 +12,15 @@ class App extends Component {
     };
   }
   render() {
-    return <div className="App">Start </div>;
+    return (
+      <div className="App">
+        <h1>Test</h1>
+        <FriendForm />
+        {this.state.friends.map(friend => (
+          <FriendList friend={friend} key={friend.id} />
+        ))}
+      </div>
+    );
   }
 }
 
