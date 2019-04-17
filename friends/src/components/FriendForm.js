@@ -1,6 +1,6 @@
 import React from "react";
 
-class FriendForm extends Component {
+class FriendForm extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -11,6 +11,7 @@ class FriendForm extends Component {
       }
     };
   }
+
   render() {
     return (
       <div className="App">

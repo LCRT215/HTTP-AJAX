@@ -15,6 +15,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Test</h1>
+
         <FriendForm />
         {this.state.friends.map(friend => (
           <FriendList friend={friend} key={friend.id} />
